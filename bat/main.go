@@ -4,8 +4,8 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-plugins/registry/consul"
-	"gomicro-grpc/ServiceImpl"
-	"gomicro-grpc/Services"
+	"gomicro-grpc/bat/datamodels"
+	"gomicro-grpc/bat/services"
 )
 
 func main(){
@@ -19,6 +19,6 @@ func main(){
 		micro.Registry(consulReg),
 		)
 	prodService.Init()
-	Services.RegisterProdServiceHandler(prodService.Server(),new(ServiceImpl.ProdService))
+	datamodels.RegisterProdServiceHandler(prodService.Server(),new(services.ProdService))
 	prodService.Run()
 }

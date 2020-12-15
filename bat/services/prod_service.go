@@ -2,13 +2,13 @@ package services
 
 import (
 	"context"
-	"gomicro-grpc/datamodels"
+	"gomicro-grpc/bat/datamodels"
 	"strconv"
 )
 
 //测试方法
 func newProd(id int32,pname string) *datamodels.ProdModel {
-	return &datamodels.ProdModel{ProdID:id,ProdName:pname}
+	return &datamodels.ProdModel{ProdID: id,ProdName:pname}
 }
 
 type ProdService struct {
