@@ -14,7 +14,7 @@ func main(){
 	)
 
 	prodService := micro.NewService(
-		micro.Name("grpcservice"),
+		micro.Name("prodservice"),
 		micro.Address(":8011"),
 		micro.Registry(consulReg),
 		)
