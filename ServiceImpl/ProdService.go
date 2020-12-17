@@ -28,3 +28,8 @@ func(*ProdService) GetProdsList(ctx context.Context,in *Services.ProdsRequest,re
 	res.Data = models
 	return nil
 }
+
+func(*ProdService) GetProdsDetail(ctx context.Context, req *Services.ProdsRequest, rsp *Services.ProdDetailResponse) error {
+	rsp.Data = newProd(req.ProdId,"测试商品详情")
+	return nil
+}
