@@ -10,7 +10,7 @@ import (
 
 func main(){
 	consulReg := consul.NewRegistry(
-		registry.Addrs("192.168.1.104:8500"),
+		registry.Addrs("127.0.0.1:8500"),
 	)
 
 	prodService := micro.NewService(
